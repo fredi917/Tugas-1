@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Gaji & Lembur</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main>
+        <h1>Kalkulator Gaji Karyawan</h1>
+        
+        <form id="salaryForm">
+            <label for="golongan">Golongan Karyawan</label>
+            <select id="golongan" required>
+                <option value="" disabled selected>Pilih Golongan</option>
+                <option value="A">Golongan A (Rp 5.000.000)</option>
+                <option value="B">Golongan B (Rp 6.500.000)</option>
+                <option value="C">Golongan C (Rp 9.500.000)</option>
+            </select>
+
+            <label for="jamLembur">Jumlah Jam Lembur</label>
+            <input type="number" id="jamLembur" min="0" value="0" required>
+
+            <button type="submit">Hitung Penghasilan</button>
+        </form>
+
+        <section id="resultBox" hidden>
+            <h2>Rincian Penghasilan</h2>
+            <p>Gaji Pokok: <span id="resPokok">Rp 0</span></p>
+            <p>Jam Lembur: <span id="resJam">0 Jam</span></p>
+            <p>Gaji Lembur: <span id="resLembur">Rp 0</span></p>
+            <p class="total">Total Penghasilan: <span id="resTotal">Rp 0</span></p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
